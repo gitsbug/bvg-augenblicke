@@ -42,4 +42,11 @@ for (de in c(T, F)) {
 	png(filename=paste(lang, "moments-transportation-hours.png", sep="-"), width=width, height=heigth)
 	print(plotTransportationMeansHours(augenblicke, de=de))
 	dev.off()
+
+	for (month in seq(1,12)) {
+		month <- sprintf("%02d", month)
+		png(filename=paste(lang, "month", month, ".png", sep="-"), width=width, height=heigth)
+		print(plotDaysMonth(augenblicke, month, de))
+		dev.off()
+	}
 }

@@ -88,7 +88,7 @@ plotTransportationMeansHours <- function(augenblicke, de=FALSE) {
   
   if (de) {
     xlab <- "Stunde"
-    ylab <- "Augenblicke"
+    ylab <- "# Augenblicke"
   }
   
   plotdf <- augenblicke
@@ -112,7 +112,7 @@ plotHoursDays <- function(augenblicke, de=FALSE) {
   
   if (de) {
     xlab <- "Stunde"
-    ylab <- "Augenblicke"
+    ylab <- "# Augenblicke"
   }
   
   plotdf <- augenblicke
@@ -137,5 +137,32 @@ plotHoursDays <- function(augenblicke, de=FALSE) {
     xlab(xlab) +
     ylab(ylab) +
     geom_bar()
+  return(p)
+}
+
+# Stacked bar plot: one bar for each day of a selected month and
+# the frequency for each year as stacked bars.
+plotDaysMonth <- function(augenblicke, month, de=F) {
+  xlab <- "Day"
+  ylab <- "# Moments"
+  legendlab <- "Year"
+  
+  if (de) {
+    xlab <- "Tag"
+    ylab <- "# Augenblicke"
+    legendlab <- "Jahr"
+  }
+  
+  plotdf <- augenblicke[format(augenblicke$spottime, "%m")==month,]
+  p <- ggplot(plotdf,
+              aes(x=factor(format(spottime, "%d")),
+                  fill = factor(format(spottime, "%Y"))
+              )) +
+    theme(axis.text.x=element_text(angle=-90)) +
+    xlab(xlab) +
+    ylab(ylab) +
+    scale_fill_discrete(legendlab) +
+    geom_bar()
+  
   return(p)
 }
