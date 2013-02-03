@@ -1,10 +1,10 @@
 # Objective: Berlin Flirt Cartography #
 
-Imaging riding a subway and spotting a person that you would like to meet but did not get the chance to talk to. Imaging a web site where such moments (called Augenblicke in the text below), can be publicly posted, hoping that the spotted person will read the post and get in touch with the poster.
+Imaging riding a subway and spotting a person that you fall into, would like to meet, but did not get the chance to talk to. Imaging a web site where such moments (called Augenblicke in the text below), can be publicly posted, hoping that the spotted person will read the post and get in touch with the poster.
 
 Such a service is provided by the [Berliner Verkehrsbetriebe](http://www.bvg.de/) (BVG), which is the main public transportation operator in Berlin. The Augenblicke can be browsed [here](https://www.bvg.de/index.php/de/9460/name/Alle+Augenblicke.html).
 
-This project aims to analyse the Augenblicke data in order to get an idea of the flirt life in Berlin. All the code to download the data from the web (scraper) and to perform the data analysis is provided. Have fun exploring big city life :-)
+This project aims to analyze the Augenblicke data in order to get an idea of the flirt life in Berlin. All the code to download the data from the web (scraper) and to perform the data analysis is provided. Have fun exploring big city life :-)
 
 For using the provided data analysis code, you will need [GNU R](http://www.r-project.org/). If you don't like using R, please feel free to use the program of your choice to perform the data analysis. The scraper outputs a data file in [JSON](http://en.wikipedia.org/wiki/JSON) format, but can be set to write CSV output. All commonly used programs should be able to parse one of these formats.
 
@@ -83,12 +83,21 @@ Results
 =======
 
 Do most of the moments occur at the weekends or during the week? The following stacked bar plot shows one bar per weekday. Each bar is split into the absolute share of Augenblicke that happened in each of the available transportation system (subway, train, bus, tram, ...)
-![Weekdays](en-moments-transportation-weekdays.png)
+
+![Weekdays](https://raw.github.com/gitsbug/bvg-augenblicke/master/plots/en-moments-transportation-weekdays.png)
+
 The above figure shows that most Augenblicke happen in the subway (U-Bahn), followed by city trains (S-Bahn). It also shows that they happen during the week, and not at the weekends when the Berliner go clubbing. So if most of them happen during the week, do they happen on the way to (8 AM) and back from work (6PM)?
 
-![Hours](en-moments-transportation-hours.png)
+![Hours](https://raw.github.com/gitsbug/bvg-augenblicke/master/plots/en-moments-transportation-hours.png)
+
 Peaks at 8 AM and 6 PM (18:00) show that this is indeed the case. Note that the 18:00 peak is much higher than the one in the morning, indicating that more Augenblicke happen after people are leaving work.
 
 Are some of the above bars modulated by weekdays, e.g., do most of the Augenblicke spotted at night time happen at weekends?
-![Hours vs. Days](en-moments-hours-vs-days.png)
+
+![Hours vs. Days](https://raw.github.com/gitsbug/bvg-augenblicke/master/plots/en-moments-hours-vs-days.png)
+
 Yes, the share of Augenblicke that can be associated with Friday / Saturday night clubbing is higher than for other days of the week during 1 and 4 in the morning.
+
+# Limitations #
+
+I do not have information about ground truth, i.e., I don't know how many flirts happen in public transportation in Berlin. Thus I do not know how many are reported on the BVG Augenblicke portal and how representative the data really is. There certainly is a bias, as needs to know of the existence of the portal prior to posting a spot. Thus, I'd expect digital natives to be more frequent users than other parts of the population.
