@@ -68,7 +68,7 @@ classifyLine <- function(line) {
 
 # Translate the classified lines
 translateLineVector <- function(lines, de=F) {
-  labels_translated <- c("Subway", "City Train", "Bus", "Tram", "Train", "Night Bus", "Rail Replacement Bus", "Fairy")
+  labels_translated <- c("Subway", "City Train", "Bus", "Tram", "Train", "Night Bus", "Rail Replacement Bus", "Ferry")
   if (de) {
     labels_translated <- c("U-Bahn", "S-Bahn", "Bus", "Tram", "RB/RE", "Nachtbus", "SEV", "Faehre")
   }

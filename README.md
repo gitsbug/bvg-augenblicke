@@ -62,7 +62,7 @@ There are a bunch of different transportation systems operated in Berlin.
 * **[Bus lines](http://www.bvg.de/index.php/en/17105/name/Bus.html)**
 * **[Night bus lines](http://www.bvg.de/index.php/en/17109/name/Night+Routes.html)** replacing the subway when they do not operate.
 * **[Tram lines](http://www.bvg.de/index.php/en/17106/name/Tram.html)**:
-* **[Fairies](http://www.bvg.de/index.php/en/17107/name/Ferry.html)**: 
+* **[Ferries](http://www.bvg.de/index.php/en/17107/name/Ferry.html)**: 
 
 [This](http://www.bvg.de/index.php/en/17100/name/Means+of+Transport+%26+Routes.html) page provides an overview over the public transportation system in Berlin.
 You can find the network map [here](http://www.bvg.de/index.php/en/17099/name/Network+Map.html).
