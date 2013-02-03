@@ -101,3 +101,5 @@ Yes, the share of Augenblicke that can be associated with Friday / Saturday nigh
 # Limitations #
 
 I do not have information about ground truth, i.e., I don't know how many flirts happen in public transportation in Berlin. Thus I do not know how many are reported on the BVG Augenblicke portal and how representative the data really is. There certainly is a bias, as needs to know of the existence of the portal prior to posting a spot. Thus, I'd expect digital natives to be more frequent users than other parts of the population.
+
+Also note that the frequency in which Augenblicke are posted does not nececcarly corrlate to flirt rates. As such, the peat at 6 PM (18:00) does not automatically imply a peak in flirt activity.
